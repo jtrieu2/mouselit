@@ -1,5 +1,5 @@
 # Spatial decision forests for MS lesion segmentation in multi-channel magnetic resonance images
-
+https://www.sciencedirect.com/science/article/abs/pii/S1053811911003740
 ## Introduction
 * Multiple Sclerosis (MS) is a chronic disease that affects white matter (WM) of central nervous system
 * automatic segmentation (locating) of lesions can help diagnosis and patient follow up
