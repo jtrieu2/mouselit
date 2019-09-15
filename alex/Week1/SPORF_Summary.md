@@ -17,7 +17,7 @@ Decision trees and random forests have been proven to be optimal learners, and i
  * Data insight using Gini importance as metrics for feature importance (difficult to compute for current oblique forests)
 
 ### Methods - How it works
-* SPORF splits on sparse, random projections
+* SPORF splits on sparse, random projections at the node level, maximizing reduction in Gini impurity
 
 ### Empirical Results and Performance
 * Supposed "consistency" boost over RF.
@@ -27,5 +27,5 @@ Decision trees and random forests have been proven to be optimal learners, and i
 
 ## Conclusion
 
-* SPORF is an powerful tool that preserves the computational efficiency and interpretability of RFs while improving on its robustness and scalability using sparse-projection, axis-oblique splits. 
+* SPORF is an powerful tool that preserves the computational efficiency and interpretability of RFs while improving on its robustness and scalability using sparse-projection, axis-oblique splits.
 * Further work includes full implementation of regression   
