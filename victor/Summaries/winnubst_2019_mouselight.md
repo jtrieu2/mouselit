@@ -119,7 +119,7 @@ Neuronal cell types are the nodes of neural circuits that determine the flow of 
 ### VAL Thalamus Contains Fine-Scale Projection Maps
 
 ## Discussion
-* > 1,000 reconstructed neurons available on online database (mouselight.janelia.org)
+* \> 1,000 reconstructed neurons available on online database (mouselight.janelia.org)
 * reconstruction of axonal arbors is valuable toward generating cellular circuit diagrams and classifying neurons on the basis of morphology
 * while pipeline does not detect synapses, axonal arborizations contain an approximately constant density of synapses, and axonal length is therefore a convenient surrogate for interareal connectivity
 * authors' histological treatments and imaging result in series of preserved brain slices, allowing for post hoc gene expression analysis by *in situ* hybridization techniques and other types of molecular characterization
