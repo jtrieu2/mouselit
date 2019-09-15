@@ -1,3 +1,6 @@
+Random Forests
+Leo Breiman, 2001
+
 
 - ensemble of trees have worked well for classification accuracy
 - a random forest is a classifer consisting of a collection of trees where each tree casts a vote for the most popular class
