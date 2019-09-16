@@ -1,6 +1,6 @@
 # Reconstruction of 1,000 Projection Neurons Reveals New Cell Types and Organization of Long-Range Connectivity in the Mouse Brain
 
-https://www.sciencedirect.com/science/article/pii/S0092867419308426?via%3Dihub#mmc3
+https://www.sciencedirect.com/science/article/pii/S0092867419308426?
 
 ## Abstract
 Neuronal cell types are the nodes of neural circuits that determine the flow of information within the brain. Neuronal morphology, especially the shape of the axonal arbor, provides an essential descriptor of cell type and reveals how individual neurons route their output across the brain. Despite the importance of morphology, few projection neurons in the mouse brain have been reconstructed in their entirety. Here we present a robust and efficient platform for imaging and reconstructing complete neuronal morphologies, including axonal arbors that span substantial portions of the brain. We used this platform to reconstruct more than 1,000 projection neurons in the motor cortex, thalamus, subiculum, and hypothalamus. Together, the reconstructed neurons comprise more than 75 meters of axonal length and are available in a searchable online database. Axonal shapes revealed previously unknown subtypes of projection neurons and suggest organizational principles of long-range connectivity.

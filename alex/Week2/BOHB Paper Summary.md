@@ -1,4 +1,4 @@
-#BOHB Paper Summary
+# BOHB Paper Summary
 * Baynesian Hyperparameter tuning sucks, not feasible for long training times and bandit-based methods alone do not converge quickly enough.
 * Try a combination of the 2 instead
 
