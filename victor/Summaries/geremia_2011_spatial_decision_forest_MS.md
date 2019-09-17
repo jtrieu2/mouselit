@@ -16,7 +16,6 @@ https://www.sciencedirect.com/science/article/abs/pii/S1053811911003740
   * T1-weighted image
   * T2-weighted image
   * FLAIR image
-  * *TO-DO*: research modalities
 * MR volumes were co-registered and sampled to fit isotropic 0.5 x 0.5 x 0.5 mm^3 resolution
 
 ### Public dataset
@@ -29,7 +28,8 @@ https://www.sciencedirect.com/science/article/abs/pii/S1053811911003740
 * labels are not available to public; intended as testing set
 
 ### Evaluation
-*TO-DO*
+* quantitative evaluation carried out on private dataset using a set of known metrics
+  * TNR, TPR, FPR, PPV, volume overlap (VO), relative absolute volume difference (VD), and surface distance (SD)
 
 ### Four Top-Ranked methods
 * Best method in 2008: Souplet et al.(2008)
@@ -62,10 +62,6 @@ https://www.sciencedirect.com/science/article/abs/pii/S1053811911003740
 * training data consists of set of labeled voxels
   * label = {0,1}; 1 for lesion and 0 for background
 
-### Forest Training
-
-### Prediction
-
 ### Features
 
 1. local
@@ -73,7 +69,6 @@ https://www.sciencedirect.com/science/article/abs/pii/S1053811911003740
 
 2. neighborhood
 * local voxel value in channel C_1 compared to mean value in channel C_2 over two 3D boxes R_1 and R_2
-* *TO-DO* include equation (8)
 * C_1 and C_2 are both intensity or prior channels
 * regions R_1 and R_2 are randomly sampled in large neighborhood of local voxel
 
@@ -92,3 +87,16 @@ https://www.sciencedirect.com/science/article/abs/pii/S1053811911003740
 * Context-rich RF TPR is 39.98 +/- 18.40 compared to Souplet et al. (2008)'s TPR of 19.21 +/- 13.68
 
 ### Results on private MSGC dataset
+* MSCG website carried out a complementary and independent evaluation of context-rich random forest
+* slightly larger TPR and comparable FPR but lower volume difference (VD) and surface distance (SD)
+* significant improvement over Souplet et al.(2008) on SD (p = 4.2 x 10^-6) for the CHB rater and on SD (p=6.1x10^-3) for the UNC rater
+
+## Discussion
+* MSGC website gathers results of methods submitted
+* score of 90 is equal to accuracy of a human rater
+* context-rich random forest scores 82.0755
+* some MS lesions are missed by experts, e.g. in the corpus callosum
+  * this limits a supervised learning approach
+* random forest is able to detect suspicious regions with high certainty
+  * suspicious regions are visually similar to MS lesions and widely present in training data, but not labeled by the expert
+* MICCAI does not show any MS lesion in gray matter, even though recent histopathological studies have shown that MS affects gray matter
