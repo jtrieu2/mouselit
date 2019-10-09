@@ -2,6 +2,10 @@
 
 ## Feature-based volume stitching
 
+- blob-like objects were detected in individual tiles using a difference of Gaussian filter.  These descriptors were matched between adjacent tiles in both x, y, and z directions using a coherent point drift algorithm
+
+- Matched descriptors were then used to estimate a non-rigid transformation which mapped voxel locations to a target coordinate space while preserving the spatial ordering. 
+
 def stitch_images(segments, tree_specifics):
 
     """Stitch together image subvolumes
@@ -24,10 +28,6 @@ def get_intrarectangle_voxel(start,end, tree_specifics):
         end {3 array of ints} -- upper corner of rectangle (to be included)
         tree_specifics {list} -- path {string}, sz {3 array}, nl {int}, channel {0 or 1}
     """
-
-- blob-like objects were detected in individual tiles using a difference of Gaussian filter.  These descriptors were matched between adjacent tiles in both x, y, and z directions using a coherent point drift algorithm
-
-- Matched descriptors were then used to estimate a non-rigid transformation which mapped voxel locations to a target coordinate space while preserving the spatial ordering. 
 
 ## 3D visualization and reconstruction
 
