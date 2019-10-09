@@ -9,7 +9,7 @@ reconstruct more than 1,000 projection neurons in the motor cortex, thalamus, su
 ### Tissue preparation and clearing
 ### Microscope
 ### Feature-based volume stitching
-`A fully imaged brain consists of $20k imaged stacks that need to be stitched to create a coherent volume. Accurate stitching is necessary to eliminate discontinuous neurites at the borders, which is critical for reliable reconstruction and automation. 
+A fully imaged brain consists of $20k imaged stacks that need to be stitched to create a coherent volume. Accurate stitching is necessary to eliminate discontinuous neurites at the borders, which is critical for reliable reconstruction and automation. 
 
 To account for non-linear defor- mations (caused by physical sectioning, optical field curvature etc.), we extended the descriptor based stitching framework:
 
@@ -24,5 +24,5 @@ Resampling was achieved by back-projecting each voxel in each output tile to the
 
 In regions where two or more input tiles overlapped, the maximum intensity was used for the corresponding location in the output tile. 
 
-The resampling task was implemented on a cluster (64 nodes each with 32 cores and 512 GB RAM) of Intel CPUs with Advanced Vector Instructions 2 (AVX2) and parallel access to high-bandwidth network storage. The input tiles were partitioned into contiguous sets and traversed in Morton order to facilitate merging overlaps in memory. Execution was dominated by the time required to read and write data to disk. Data were resampled to 0.25 3 0.25 3 1 mm voxels, and stored on disk along with downsampled octree representations of the same volume for visualization at different spatial scales.
+Data were resampled to 0.25x0.25x3x1 um voxels, and stored on disk along with downsampled octree representations of the same volume for visualization at different spatial scales.
 ### Sample registration
