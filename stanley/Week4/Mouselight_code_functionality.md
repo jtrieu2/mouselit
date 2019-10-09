@@ -2,9 +2,7 @@
 
 ## Feature-based volume stitching
 
-- blob-like objects were detected in individual tiles using a difference of Gaussian filter.  These descriptors were matched between adjacent tiles in both x, y, and z directions using a coherent point drift algorithm
-
-- Matched descriptors were then used to estimate a non-rigid transformation which mapped voxel locations to a target coordinate space while preserving the spatial ordering. 
+- Match descriptors between adjacent tiles in both x, y, and z directions. 
 
 def stitch_images(segments, tree_specifics):
 
@@ -29,11 +27,23 @@ def get_intrarectangle_voxel(start,end, tree_specifics):
         tree_specifics {list} -- path {string}, sz {3 array}, nl {int}, channel {0 or 1}
     """
 
+- Map voxel locations to a target coordinate space while preserving the spatial ordering. 
+
+def space_to_voxel(spatial_coord, origin, spacing):
+
+    """Convert spatial location to voxel coordinates
+    
+    Arguments:
+        spatial_coord {3-array} -- spatial coordinates in microns
+        origin {3-array} -- spatial coordinates of origin in microns
+        spacing {3-array} -- size of each voxel in microns
+    Returns:
+        voxel_coord {3-array of ints} -- voxel coordinate
+    """
+
 ## 3D visualization and reconstruction
 
-- Resampling was achieved by back-projecting each voxel in each output tile to the nearest sampled voxel.
-
-- In regions where two or more input tiles overlapped, the maximum intensity was used for the corresponding location in the output tile. 
+- Back-projecting each voxel in each output tile to the nearest sampled voxel. In regions where two or more input tiles overlapped, the maximum intensity was used for the corresponding location in the output tile. 
 
 def divide_voxel_bounds(start, end, tree_specifics):
 
@@ -49,3 +59,5 @@ def divide_voxel_bounds(start, end, tree_specifics):
     """
 
 - Data were resampled to 0.25x0.25x3x1 um voxels, and stored on disk along with downsampled octree representations of the same volume for visualization at different spatial scales.
+
+Not sure
