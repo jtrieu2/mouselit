@@ -1,8 +1,17 @@
 # From src/image_getters.py
 
 ## Feature-based volume stitching
--Extended the descriptor based stitching framework:
-
+- Extended the descriptor based stitching framework:
+def stitch_images(segments, tree_specifics):
+    """Stitch together image subvolumes
+    
+    Arguments:
+        segments {3 list} -- segment locations as outputted by divide_voxel_bounds()
+        tree_specifics {list} -- path {string}, sz {3 array}, nl {int}, channel {0 or 1}
+    
+    Returns:
+        volume -- image subvolume
+    """
 1. blob-like objects were detected in individual tiles using a difference of Gaussian filter.  These descriptors were matched between adjacent tiles in both x, y, and z directions using a coherent point drift algorithm
 
 2.  Matched descriptors were then used to estimate a non-rigid transformation which mapped voxel locations to a target coordinate space while preserving the spatial ordering. 
