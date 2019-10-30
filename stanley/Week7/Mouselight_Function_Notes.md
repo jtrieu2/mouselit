@@ -205,7 +205,7 @@ THE ABOVE FUNCTION HAS NOT BEEN TESTED YET
         segments.append(coords)     # segments = [ [[5807, 5807], [5808, 5808]] ]
     return segments
 
-# stitch_images(segments, tree_specifics):
+# stitch_images(segments, tree_specifics): ??Problem (potentially has been fixed by Victor) with stitch_image and get_intrarectangle_voxel??
     Stitch together image subvolumes
     Arguments:
         segments {3 list} -- segment locations as outputted by divide_voxel_bounds()
