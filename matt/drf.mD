@@ -1,5 +1,6 @@
 # Deep Regression Forests for age Estimation
 Wei Shen, Yilu Guo, Yan Wang, Kai Zhao, Bo Wang, Alan Yuille | CVPR | 2018
+https://cs.jhu.edu/~alanlab/Pubs18/shen2018deep.pdf
 
 ## Abstract
 
